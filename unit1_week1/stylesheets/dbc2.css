@@ -1,0 +1,27 @@
+a:link { color: blue;}
+a:visited { color: green;}
+a:hover { color: yellow; }
+a:active {color: red;}
+
+.caption {
+	font-style: italic;
+	color: grey;
+	padding-bottom: 0px;
+}
+
+
+#sidebar {
+	background-color: #c2c2d6;
+	float: left;
+	padding: 20px 20px;
+	width: 200px;
+	height: 500px;
+}
+
+#content {
+	background-color: #f0f0f5;
+	float: left;
+	padding: 20px 40px;	
+	width: 480px;
+	height: 500px;
+}
