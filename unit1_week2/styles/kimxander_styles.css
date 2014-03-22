@@ -1,0 +1,48 @@
+/* #5CCDC9 (body),#009B95 sec, #1D7571 Head/foot */
+
+        @import url(http://fonts.googleapis.com/css?family=Droid+Sans);
+
+        body {
+            background-color: 
+            }
+            
+        html, body{
+            background-color: #5CCDC9;
+            margin: 0px;
+            padding: 0px;
+            border: 0px;
+            font-family: 'Droid Sans', Trebuchet;
+            text-align:center;
+        }
+            
+        #wrapper {
+            max-width: 900px;
+            margin: 0px auto;
+        }
+        
+        .bio {
+            width: 400px;
+            float: left;
+            background-color:#009B95;
+            padding: 15px;
+        }
+        
+        #paired {
+            background-color: #009B95;
+            max-width: 900px;
+        }
+        
+        header {
+            background-color: #1D7571;
+        }
+        
+        footer {
+            background-color:#1D7571;
+        }
+        
+        .column_image {
+            max-width: 80%;
+        }
+        
+    </style>
+  </head>
