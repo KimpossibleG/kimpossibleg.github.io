@@ -12,6 +12,7 @@
 
 		<nav class="sidebar">
 <!-- insert name of blog article and section name here -->
+			<a href=#cycle><h3>Taking the Cycle-Path</h3></a>
 			<a href=#hash_array><h3>Hash, you array of sunshine!</h3></a>
 			<a href=#pair_feedback><h3>Pairing & Feedback</h3></a>
 			<a href=#popular_js><h3>JavaScript, the Popular</h3></a>
@@ -27,7 +28,20 @@
 				<p>********</p>
 			</article>
 -->
-			
+			<article id="cycle" class="content" "chunk">
+				<h3>Taking the Cycle-Path</h3>
+				<p>Let's talk cycling.</p>
+				<p>We all know it hurts your butt. What you might not know is that geeks do it, whenever they want, with minimal butt-pain involved whatsoever. Yeah, that's right. And like a woman about to get thrown out of the magician's union, I'm going to show you what's behind the curtain.</p>
+				<p>It's a method in Ruby.</p>
+				<p>That's the end of the fun part. (To each her own, right?! ;-) ) Read on if you'd like to know how it works.</p>
+				<p>You call cycle on an array the standard way: array.cycle , and need an object and a block in curly braces. If you leave that last part out, and just call .cycle on the array, it will return the Enumerable.* The method can also take an argument. If left empty, it defaults to nil. Otherwise, it should be a positive integer. <strong>That integer will tell the method how many times to repeat -- or <em>cycle</em> -- the array through the block.</strong></p>
+				<p>The object is any new variable, which represents each element of the array. The block tells us what to do with that element... puts it? print it? collect it? By pulling this altogether, we will take the array, repeat/cycle it the specified number of times, and then puts/print/etc it, as specified by the block. For example:</p>
+				<p>kids = ["Ali", "Eli", "Liz"]</p>
+				<p>kids.cycle(3) {|x| puts x }</p>
+				<p> => ["Ali", "Eli", "Liz","Ali", "Eli", "Liz","Ali", "Eli", "Liz"]</p>
+				<p>As my mother-in-law likes to say: Winner, winner, chicken dinner. :-) </p>
+			</article>
+
 			<article id="hash_array" class="content" "chunk">
 				<h3>Hash, you array of sunshine!</h3>
 				<p>What if I told you that every array is actually a hash?</p>
