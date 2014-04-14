@@ -12,6 +12,7 @@
 
 		<nav class="sidebar">
 <!-- insert name of blog article and section name here -->
+			<a href=#classy><h3>Keeping it Classy</h3></a>
 			<a href=#cycle><h3>Taking the Cycle-Path</h3></a>
 			<a href=#hash_array><h3>Hash, you array of sunshine!</h3></a>
 			<a href=#pair_feedback><h3>Pairing & Feedback</h3></a>
@@ -28,6 +29,36 @@
 				<p>********</p>
 			</article>
 -->
+			<article id="classy" class="content" "chunk">
+				<h3>Keeping it Classy</h3>
+				<p>When I first stumbled into creating classes in Ruby, I was hard-pressed to find a definition of a class or an instance that didn't rely heavily on an example. I found "a class is the blueprint from which individual objects are created" on <a href="http://www.tutorialspoint.com/ruby/ruby_classes.htm">Tutorials Point</a>, and "classes are the basic template from which object instances are created. A class is made up of a collection of variables representing internal state and methods providing behaviours that operate on that state." on <a href="http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Classes">WikiBooks</a>. Re-reading them now, as someone who has played with classes for a bit, that lingo is kinda-sorta starting to make sense to me -- but the reality is, for non-technical people, those explanations are in a foreign and mysterious language! :-) I, too, will now join the ranks of those who rely on examples to clarify this 'class' business. Ready, fellow laymen?</p>
+				<p>Look around you, and mentally list three things you see that you use fairly often. My list? A sofa, a coffee table, and a dog toy. I bet you recognize these words. You may even have these items yourself, and you  most likely know what you can do with them. For example, we know that a coffee table typically has a flat surface for holding things like coffee and magazines, that it is typically found in a living room type of area, and that we shouldn't sit on it or feed it to the dog. Having a name for this item saves us from having to describe it over and over and over again whenever we want to reference it. Classes in Ruby exist for the same reason. When we mention a certain class -- an array, a hash, a string -- those of us who speak Ruby automatically know what is being spoken about, and what kinds of things can be done with it -- i.e. what <em>methods</em> it has.</p>
+				<p>When we start getting creative in Ruby and building our own furniture or household items, we define them as classes, too -- and we initialize them so that they have the standard features we'd come to expect from that item. For example, suppose that, in Ruby, we're building an app to do our taxes. Taxes, bless them, have a zillion forms. Instead of writing code to create a form every single time we want to use one, we can create a class called Form that includes the common features we'll be using: a free text area, a check box, a spot for your signature. We'll also define things that we can do with that form, like print it, email it, or throw it away.</p>
+				<p>To keep things super straightforward for now, let's walk through a quick example. Suppose that we are going to be making checklists and checklists and more checklists in Ruby. It'd be wise to create a CheckList class, so that we can use a basic checklist whenever we have the need. We'd do that as follows:</p>
+				<p>class Checklist(number_of_items, title)</p>
+				<p>		def initialize
+				<p>			@number_of_items = number_of_items</p>
+				<p>			@title = title</p>
+				<p>		end</p>
+				<p>end</p>
+				<p></p>
+				<p>That is now a basic blueprint for building a Checklist. When we create one, we'll specify the number of items we want on it, and its title, and voila - we have the outline of basic checklist.</p>
+				<p>What's with the @this = this business? That exists because every checklist that we create is going to need its own title. We won't, for example, want to call every one of them Checklist o' Cool. Because each one will have a title, and that title will be different, we say that this is an INSTANCE of a Checklist, with an INSTANCE VARIABLE of a title, and of a number of items. Defining them in our class with the @ symbols lets Ruby know that, every time we have a new checklist, we're going to have a new title and number of items.</p>
+				<p>Within every instance of a Checklist we create, we might want to do similar things -- like check off an item from the list. Within our class definition, we can create methods to do that, such as:</p>
+				<p>		def check_off_item(@item_number)</p>
+				<p>			if @item_number == "complete"</p>
+				<p>				delete item_number</p>
+				<p>			else</p>
+				<p>				return "You haven't done this!"</p>
+				<p>			end</p>
+				<p></p>
+				<p>Now, everytime we want to remove an item, we can call this method:</p>
+				<p>our_list.check_off_item(4)</p>
+				<p>...will remove item 4 from the list. No need to write the code every time!</p>
+				<p>While this is a very simplistic take on classes, which are actually quite powerful and allow us to do some awesome things in Ruby, the fundamental point is there: a class gives us a blueprint standard, and its instance variables and methods let us do specific things that make sense for the object.</p>
+			</article>
+
+
 			<article id="cycle" class="content" "chunk">
 				<h3>Taking the Cycle-Path</h3>
 				<p>Let's talk cycling.</p>
