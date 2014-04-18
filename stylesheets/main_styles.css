@@ -9,6 +9,24 @@ a:visited { color: #333399;}
 a:hover { color: #00ccff; }
 a:active {color: #00ccff;}
 
+code_block {
+	font-family: courier;
+	background-color: #F5F5F5;
+	float: left;
+	width: 90%;
+	border: 1px solid #333399;
+	border-radius: 5px;
+	margin: auto 10% 2% auto;
+	padding: 2%; 
+}
+
+code_words {
+	font-family: courier;
+	background-color: #F5F5F5;
+	border: 1px solid #333399;
+	border-radius: 2px;
+}
+
 
 /* IDs for header footer sidebar and content */
 
@@ -46,6 +64,7 @@ a:active {color: #00ccff;}
 	clear: both;
 	margin-bottom: 0.5%;
 }
+
 .footer {
 	background-color: #88ccee;
 	color: #ffffff;
