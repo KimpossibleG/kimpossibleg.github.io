@@ -29,54 +29,113 @@
 			</article>
 -->
 
-			<article id="pair_feedback" class="content" "chunk">
-				<h3>Pairing & Feedback</h3>
-				<p>I really enjoy working with other people -- particularly smart, inventive, awesome people, like the ones that I have met "live" thus far in Dev Bootcamp: Big shout-outs to <a href="http://catherinev.github.io/index.html">Catherine</a>, <a href="http://bontgoy.github.io/index.html">Tyler</a>, <a href="http://xanderglassman.github.io/index.html">Xander</a>, and <a href="http://mikeepourhadi.github.io/index.html">Mikee</a>! You guys rock!</p>
-				<p>Annnnnd, I hate pairing. I loathe it. I feel like a useless knob when I am acting as somebody else's fingers (aka being the Driver) and I feel stressed, rushed, and incompetent as the Navigator. It's a real struggle for me to be learning in either case. I feel that the uber-structured format of pairing is extremely limiting and hinders creativity and helpful conversation. It has been in the cases where my pair and I stray from the offical model and actually talk to each other and throw ideas around that I feel like we're both really benefitting -- and then we lose that momentum when we slip back into who is going to be driving and who is going to be navigating. Perhaps pairing will be more comfortable and productive when I know my pair well, know his/her level of skills and how it compares to my own, know his/her idiosyncracies, etc.</p>
-				<p>The peer feedback that I've received on my coding and challenges thus far has been of excellent quality. It has consistently been specific, actionable, and kind -- and really helpful. I feel great getting the feedback!</p>
-				<p>I haven't received any written feedback via the Feedbackinator yet, so I can't comment on how it will feel to get anonymous feedback. I have noticed, however, that the biggest gap in giving feedback (based on all the comments that I have read and rated) is when it comes to giving Actionable points. Everyone seems to quick to tell each other how fabulous they are, or how much they enjoyed the pairing session, but very few seem to provide suggestions for improvement. I find that disappointing.</p>
-				<p>I am looking forward to getting some feedback from DBC staff, and confess that I am surprised that I haven't received any yet -- at least not that I know of! I know that I can get my code to pass tests, but I think that is only half the battle. Does my work indicate that I am 'getting it,' or am I relying on band-aids and workarounds too much? Is my pseudocode strong, and would it be helpful/appropriate for a work environment? I've been veering from the reflections guidelines and focussing on what is most helpful for myself. Am I still gaining from the exercise in the way that DBC intended?</p>
-				<p>Writing feedback has been pretty painless. I do find that I am a bit wordy, but I don't think that negatively impacts the effectiveness of my messages. I do make an effort to be specific, actionable, and kind -- and it's great to have those guidelines in place.</p>
-<!--Pairing:
+			<article id="classy" class="content" "chunk">
+				<h3>Keeping it Classy</h3>
+				<p>When I first stumbled into creating classes in Ruby, I was hard-pressed to find a definition of a <code_words>class</code_words> or an <code_words>instance</code_words> that didn't rely heavily on an example. I found "a class is the blueprint from which individual objects are created" on <a href="http://www.tutorialspoint.com/ruby/ruby_classes.htm">Tutorials Point</a>, and "classes are the basic template from which object instances are created. A class is made up of a collection of variables representing internal state and methods providing behaviours that operate on that state." on <a href="http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Classes">WikiBooks</a>. Re-reading them now, as someone who has played with classes for a bit, that lingo is kinda-sorta starting to make sense to me -- but the reality is, for non-technical people, those explanations are in a foreign and mysterious language! :-) I, too, will now join the ranks of those who rely on examples to clarify this <code_words>class</code_words> business. Ready, fellow laymen?</p>
+				<p>Look around you, and mentally list three things you see that you use fairly often. My list? A sofa, a coffee table, and a dog toy. I bet you recognize these words. You may even have these items yourself, and you  most likely know what you can do with them. For example, we know that a coffee table typically has a flat surface for holding things like coffee and magazines, that it is typically found in a living room type of area, and that we shouldn't sit on it or feed it to the dog. Having a name for this item saves us from having to describe it over and over and over again whenever we want to reference it. Classes in Ruby exist for the same reason. When we mention a certain <code_words>class</code_words> -- an <code_words>array</code_words>, a <code_words>hash</code_words>, a <code_words>string</code_words> -- those of us who speak Ruby automatically know what is being spoken about, and what kinds of things can be done with it -- i.e. what <em>methods</em> it has.</p>
+				<p>When we start getting creative in Ruby and building our own furniture or household items, we define them as classes, too -- and we initialize them so that they have the standard features we'd come to expect from that item. For example, suppose that, in Ruby, we're building an app to do our taxes. Taxes, bless them, have a zillion forms. Instead of writing code to create a form every single time we want to use one, we can create a <code_words>class</code_words> called Form that includes the common features we'll be using: a free text area, a check box, a spot for your signature. We'll also define things that we can do with that form, like print it, email it, or throw it away.</p>
+				<p>To keep things super straightforward for now, let's walk through a quick example. Suppose that we are going to be making checklists and checklists and more checklists in Ruby. It'd be wise to create a CheckList class, so that we can use a basic checklist whenever we have the need. We'd do that as follows:</p>
+				<code_block><p>
+				class Checklist(number_of_items, title)<br>
+				&nbsp;&nbsp;def initialize<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;@number_of_items = number_of_items<br>
+				&nbsp;&nbsp;&nbsp;&nbsp;@title = title<br>
+				&nbsp;&nbsp;end<br>
+				end</p>
+				</code_block>
+				<p>That is now a basic blueprint for building a Checklist. When we create one, we'll specify the number of items we want on it, and its title, and voila - we have the outline of basic checklist.</p>
+				<p>What's with the <code_words>@this = this</code_words> business? That exists because every checklist that we create is going to need its own title. We won't, for example, want to call every one of them Checklist o' Cool. Because each one will have a title, and that title will be different, we say that this is an <code_words>instance</code_words> of a Checklist, with an <code_words>instance variable</code_words> of a title, and of a number of items. Defining them in our class with the <code_words>@</code_words> symbols lets Ruby know that, every time we have a new checklist, we're going to have a new title and number of items.</p>
+				<p>Within every instance of a Checklist we create, we might want to do similar things -- like check off an item from the list. Within our class definition, we can create methods to do that, such as:</p>
+				<code_block><p>
+				def check_off_item(@item_number)<br>
+				&nbsp&nbspif @item_number == "complete"<br>
+				&nbsp&nbsp&nbsp&nbspdelete item_number<br>
+				&nbsp&nbspelse<br>
+				&nbsp&nbsp&nbsp&nbspreturn "You haven't done this!"<br>
+				&nbsp&nbspend<br>
+				end</p>
 
-What was it like to pair with others to solve challenges?
-Was something particularly fun or rewarding?
-Was something frustrating and difficult for you?
-Feedback
+				</code_block>
+				<p>Now, everytime we want to remove an item, we can call this method:</p>
+				<p><code_words>our_list.check_off_item(4)</code_words></p>
+				<p>...will remove item 4 from the list. No need to write the code every time!</p>
+				<p>While this is a very simplistic take on classes, which are actually quite powerful and allow us to do some awesome things in Ruby, the fundamental point is there: a class gives us a blueprint standard, and its instance variables and methods let us do specific things that make sense for the object.</p>
+			</article>
 
-How did you feel when you read your feedback?
-Was the feedback you received helpful to your learning?
-Based on the feedback you've received, what are you going to do to improve next time you pair?
-How was it to write feedback?
-What was most difficult for you when writing feedback for your pair?
-Overall, what do you think of using pairing and feedback to guide your learning?-->
+			<article id="techtrouble" class="content" "chunk">
+				<h3>How can cheap storage be troublesome for tech?</h3>
+				<p>There wasn't a lot of waste and garbage back in the good ol' days. Then, along came the industrial revolution, and along with it came oodles and tonnes and mind-boggling amounts of waste, and it had to go somewhere. We solved that problem by digging a little hole and throwing it in. Then, we dug another hole. And another hole. And now, our landfills are all over the place, expensive, and causing significant problems to our world.</p>
+				<p>Enter the tech revolution. With the arrival of computers came the production of data. At first, it was just a little. Then a little more. Now, the amount of data that we have is astronomical -- and it's all gotta go somewhere.</p>
+				<p>The solution has been data storage. At first, it was reasonably expensive, but we didn't need a lot. As we needed more and more, it became less and less expensive. Awesome, right?! We have ended up with buildings and buildings full of storage. They need air conditioning. They emit CO2. And, sometimes, getting specific data out of them can be a giant -- and expensive -- pain in the rumpus. Just to add insult to injury, the amount of data that the world is producing -- and the inexpensive data storage solution -- means that these centers are becoming more and more prolific, and therefore more problematic.</p>
+				<p>So, what do we do? We approach the problem in a similar way to how we've been approaching our garbage problem. We need to reduce, figure out how to manage our data. There, the similarities between garbage and data (mostly) end.</p>
+				<p>One of the most simple solutions to our data problem could be just to delete it. Yes?</p>
+				<p>Technical complications aside, we're now living in a world where most people don't <strong>want</strong> to get rid of their data. They want those pictures, those videos, the songs -- and that's just personal stuff. Whole industries are changing the ways that they produce and use data. The medical industry, for example, is digitizing x-rays and patient records. Aviation? Manufacturing? They're creating incredibly complex (and data-heavy) experiments and simulators. The result is data, data, and more data -- not less. Let's throw common ol' business into the mix. Sometimes, they'd be (more than?) happy to delete their data (Enron and Arthur Andersen, anyone?), but that isn't morally or legally in their best interests. Still, do the emails about company luncheons and videos of the CEO dancing on a picnic table need to be saved -- especially if they've been sent to every member of the company? Hello, unnecessary and expensive storage!</p>
+				<p>Solutions? They're in the works. A group has come together called the <a href="https://www.snia.org/">Storage Networking Industry Association (SNIA)</a>. It's a not-for-profit association dedicated to connecting "the IT industry with end-to-end storage and networking solutions." The SNIA has defined the principles of information lifecycle management (ILM), which focusses on getting rid of the data that companies dont', and won't, need as quickly as possible, while maintaining the rest in a way that is cost-effective and accessible.</p>
+				<p>A lot of the rest is going to be about user behaviour... and that is going to be a lot like teaching people to reduce, reuse, and recycle. Takes time. A lot of time.</p>
+				<br>
+				<p>For more information, see <a href="http://web.archive.org/web/20090206010415/http://www-03.ibm.com/systems/resources/systems_storage_solutions_pdf_toxic_tb.pdf">this paper</a>, by IBM. Advertising, yes -- but very informative.</p>
+			</article>
 
+			<article id="cycle" class="content" "chunk">
+				<h3>Taking the Cycle-Path</h3>
+				<p>Let's talk cycling.</p>
+				<p>We all know it hurts your butt. What you might not know is that geeks do it, whenever they want, with minimal butt-pain involved whatsoever. Yeah, that's right. And like a woman about to get thrown out of the magician's union, I'm going to show you what's behind the curtain.</p>
+				<p>It's a method in Ruby.</p>
+				<p>That's the end of the fun part. (To each her own, right?! ;-) ) Read on if you'd like to know how it works.</p>
+				<p>You call cycle on an array the standard way: array.cycle , and need an object and a block in curly braces. If you leave that last part out, and just call .cycle on the array, it will return the Enumerable.* The method can also take an argument. If left empty, it defaults to nil. Otherwise, it should be a positive integer. <strong>That integer will tell the method how many times to repeat -- or <em>cycle</em> -- the array through the block.</strong></p>
+				<p>The object is any new variable, which represents each element of the array. The block tells us what to do with that element... puts it? print it? collect it? By pulling this altogether, we will take the array, repeat/cycle it the specified number of times, and then puts/print/etc it, as specified by the block. For example:</p>
+				<p>kids = ["Ali", "Eli", "Liz"]</p>
+				<p>kids.cycle(3) {|x| puts x }</p>
+				<p> => ["Ali", "Eli", "Liz","Ali", "Eli", "Liz","Ali", "Eli", "Liz"]</p>
+				<p>As my mother-in-law likes to say: Winner, winner, chicken dinner. :-) </p>
+			</article>
+
+			<article id="hash_array" class="content" "chunk">
+				<h3>Hash, you array of sunshine!</h3>
+				<p>What if I told you that every array is actually a hash?</p>
+				<p>It's true. Sort of.</p>
+				<p>Here's the deal: An array is just a big ol' numbered list, where the numbers are invisible. That's it, crew. The first number is 0, which is kinda screwy unless you grew up in one of those areas where the ground floor of a building is known as something other than the first floor, but I digress. Arrays = numbered lists. Ta-da!</p>
+				<p>A hash? Stick with me here. A hash is also a list. It can be a numbered list, if you like. Or, it can be a lettered list. Yep. Now, let's get a little cray-cray: It can a list listed by ANYTHING YOU WANT, as long as each of those things is unique. Examples? These are all valid hashes:</p>
+				<p>Example 1:</p>
+				<p>1. potato</p>
+				<p>2. car</p>
+				<p>3. Edward</p>
+				<br>
+				<p>Example 2:</p>
+				<p>A. potato</p>
+				<p>B. car</p>
+				<p>C. Edward</p>
+				<br>
+				<p>Example 3:</p>
+				<p>monkey. potato</p>
+				<p>blue. car</p>
+				<p>spoon. Edward</p>
+				<br>
+				<p>But this one? This isn't valid. Two of the indexes are the same. FAIL.</p>
+				<p>monkey. potato</p>
+				<p>blue. car</p>
+				<p>blue. Edward</p>
+				<br>
+				<p>So, that's it. Arrays are pretty much just the most basic form of hashes, always numbered, with invisible numbers. Cool?</p>
+				<p>If that's the case, why would we ever use an array? We'd use them whenever we want just a simple, simple list, that is invisibly numbered. For anything else, we'll go hash. They have a lot more flexibility, and can also act as mini-mini-databases. Dig it.</p>
 
 			</article>
 
-			<article id="values" class="content" "chunk">
-				<h3>Exploring My Values</h3>
-				<p>Three times in my life when I recall being my absolute happiest, most satisfied, and proudest include my wedding day, watching my young daughter on her first carnival ride, and wrapping up a speech at a conference. The values that come to mind when reflecting on these occasions have quite a bit of overlap:</p>
-				<ul>
-					<li>Close relationships</li>
-					<li>Confidence</li>
-					<li>Excitement</li>
-					<li>Introspection</li>
-					<li>Enthusiasm</li>
-				</ul>
-				<p>The value of those that is particularly important to me is <strong>Introspection</strong>. I think that a false happiness is easily achieved, perhaps through adrenalin or celebration, or the use of drink or drugs. When introspection is involved, however -- when one can look inside and feel, understand, accept, and truly believe that the right choices are being made, that growth is happening, or that something is genuinely beautiful to you -- THAT'S when true happiness and satisfaction is possible.</p>
-				<p>On a scale of 1-5 where 1 means Disagree and 5 means Agree, this is how much I try to live up to these values:</p>
-				<ul>
-					<li>Close relationships: 5</li>
-					<li>Confidence: 4</li>
-					<li>Excitement: 4</li>
-					<li>Introspection: 5</li>
-					<li>Enthusiasm: 4</li>
-				</ul>
-				<p>Close relationships and introspection are two of the most important elements of who I am and how I live my life. While I appreciate confidence, excitement, and enthusiasm, I feel that confidence and excitement are more the result of what I'm doing than values, and that enthusiasm is a value that I must consciously apply whenever appropriate.</p>
-				<p>The last topic that someone asked me for advice on was parenting -- specifically, how and when to go about having a toddler give up her pacifier. I've been a parent for almost four years, and it's been an ongoing shock to me that I'm actually pretty decent at it. I never thought I'd have the magical parenting touch. The fact that my friends ask me for advice on various elements of parenting -- and then often go on to accept and apply the advice -- makes my heart grow six sizes every time. I suppose that makes sense: Turns out that I value close relationships and introspection, which is a lot of what parenting is all about!</p>
 
+
+			<article id="popular_js" class="content" "chunk">
+				<h3>JavaScript, the Popular. Why do we love thee?</h3>
+				<p>I've been asked why JavaScript is so darn popular.</p>
+				<p>My answer? ... "JavaScript is popular?!"</p>
+				<p>This whole JavaScript thing is pretty new news to me, but now that I'm working on becoming a fancy coder-pants, I suppose it's good to know the answer. In fact, it's probably good to know what the eff it is.</p>
+				<p>So.</p>
+				<p>Umm... :-)</p>
+				<p>JavaScript is a <strong>programming</strong> language. We use it to make <strong>programs</strong>. Right? Right. But, more fundamentally, it makes web pages more dynamic. So, is it a replacement for HTML (which is the language we use to make webpages look like webpages instead of like pages of code)? No, sirree. HTML is still the essence and building blocks of webpages; JavaScript makes it do stuff. An analogy? HTML is like printed song lyrics; JavaScript is what takes those lyrics and turns them into a karaoke video. Before JavaScript, HTML just sat around on the web and looked pretty. With the addition of JavaScript, links now change colors when you hover over them. Pictures can scroll. You can click on a button or an image and it will change. That, my friends, is because of our good pal JavaScript.</p>
+				<p>What's not to love? Back in the days of Netscape, who created JavaScript, JavaScript and the interwebs were like drunk freshman at a party: alllllll over each other, and confident that it was true love! Then, (dum dum dummmmmm!), along came some better looking kids who may have even been sober and interesting and just plain better, like Shell, PHP, Perl, and Ruby. Still, JavaScript has become and remains the absolute most popular web dev language out there. <strong>What gives?</strong></p>
+				<p>Ubiquity: That's what gives. All the main browsers out there support JavaScript. As well, the libraries and extra tag-along bits and pieces that go along with JavaScript have become HUGE -- which is akin to a fully, incredibly, mesmerizingly well stocked kitchen to someone advised to make a meal. If all you have is carrots and potatoes, a pot, and a hotplate, there's a good chance you're having boiled carrots and potatoes, The End. In a kitchen with every imaginable slicer, dicer, ingredient, spice, utensil, and thinga-ma-jig, a gourmet spread is possible. Who doesn't want a gourmet website instead of carrots and potatoes?</p>
+				<p>Add to all of this that JavaScript is relatively easy to learn, plays well with DOM, and processes on the client side, and we have a winner. The interwebs has a winner. And that, my friends, is why JavaScript is the most popular girl at the party.</p>
 			</article>
+
 
 
 			<article id="entry1" class="content" "chunk">
