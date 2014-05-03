@@ -85,3 +85,11 @@ code_words {
 	clear: both;
 
 }
+
+.blog_image {
+	max-width: 85%;
+	margin: 0.5%;
+	border: 2px black solid;
+	clear: both;
+
+}
