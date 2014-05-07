@@ -12,7 +12,7 @@
 
 		<nav class="sidebar">
 <!-- insert name of blog article and section name here -->
-			<a href=#sqlnosql><h3>So SQL? NoSQL?</h3></a>
+			<a href=#sqlnosql><h3>So, SQL? NoSQL?</h3></a>
 			<a href=#classy><h3>Keeping it Classy</h3></a>
 			<a href=#techtrouble><h3>Tech Trouble: Storage</h3></a>
 			<a href=#cycle><h3>Taking the Cycle-Path</h3></a>
@@ -32,15 +32,15 @@
 			<article id="sqlnosql" class="content" "chunk">
 				<h3>So SQL? NoSQL? Well, h3ll!</h3>
 				<p>Alllllll righty, team! We need a database. A biiiiiiiiig database for our biiiiiiiig, super-successful company. Let's SQL it up, yeah yeah? Well, big news, y'all. It's the 21st century, and we have choices now. O_o You heard it here first.</p>
-				<p>There is a lot of great information about the whys behind going SQL vs NoSQL, and one of the best summaries I found is here, at <a href="http://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/">The Geek Stuff</a>. mongoDB also has a nice <a href="http://www.mongodb.com/nosql-explained#nosql-vs-sql">summary table</a>, but keep in mind that they're a player in the NoSQL market, so proceed with caution. (They neglected, for exammple, to mention that SQL is a better choice for a highly complex-transactional business).</p>
+				<p>There is a lot of great information about the whys behind going SQL vs NoSQL, and one of the best summaries I found is here, at <a href="http://www.thegeekstuff.com/2014/01/sql-vs-nosql-db/">The Geek Stuff</a>. mongoDB also has a nice <a href="http://www.mongodb.com/nosql-explained#nosql-vs-sql">summary table</a>, but keep in mind that they're a player in the NoSQL market, so proceed with caution. (They neglected, for example, to mention that SQL is a better choice for a highly complex-transactional business).</p>
 				<p>I'm definitely more excited to do some work with NoSQL databases, if only because I've done a bit of work with SQL in the past, and exploring/learning something new is always awesome. I also have a pretty clear picture in my head of how SQL databases work, and the idea of NoSQL seems like a big, scary mess. I make checklists for fun. Big, scary data messes are the things of nightmares, when you're me. ;-) Looking forward to playing with one!</p>
 			</article>			
 
 			<article id="classy" class="content" "chunk">
 				<h3>Keeping it Classy</h3>
-				<p>When I first stumbled into creating classes in Ruby, I was hard-pressed to find a definition of a <code_words>class</code_words> or an <code_words>instance</code_words> that didn't rely heavily on an example. I found "a class is the blueprint from which individual objects are created" on <a href="http://www.tutorialspoint.com/ruby/ruby_classes.htm">Tutorials Point</a>, and "classes are the basic template from which object instances are created. A class is made up of a collection of variables representing internal state and methods providing behaviours that operate on that state." on <a href="http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Classes">WikiBooks</a>. Re-reading them now, as someone who has played with classes for a bit, that lingo is kinda-sorta starting to make sense to me -- but the reality is, for non-technical people, those explanations are in a foreign and mysterious language! :-) I, too, will now join the ranks of those who rely on examples to clarify this <code_words>class</code_words> business. Ready, fellow laymen?</p>
-				<p>Look around you, and mentally list three things you see that you use fairly often. My list? A sofa, a coffee table, and a dog toy. I bet you recognize these words. You may even have these items yourself, and you  most likely know what you can do with them. For example, we know that a coffee table typically has a flat surface for holding things like coffee and magazines, that it is typically found in a living room type of area, and that we shouldn't sit on it or feed it to the dog. Having a name for this item saves us from having to describe it over and over and over again whenever we want to reference it. Classes in Ruby exist for the same reason. When we mention a certain <code_words>class</code_words> -- an <code_words>array</code_words>, a <code_words>hash</code_words>, a <code_words>string</code_words> -- those of us who speak Ruby automatically know what is being spoken about, and what kinds of things can be done with it -- i.e. what <em>methods</em> it has.</p>
-				<p>When we start getting creative in Ruby and building our own furniture or household items, we define them as classes, too -- and we initialize them so that they have the standard features we'd come to expect from that item. For example, suppose that, in Ruby, we're building an app to do our taxes. Taxes, bless them, have a zillion forms. Instead of writing code to create a form every single time we want to use one, we can create a <code_words>class</code_words> called Form that includes the common features we'll be using: a free text area, a check box, a spot for your signature. We'll also define things that we can do with that form, like print it, email it, or throw it away.</p>
+				<p>When I first stumbled into creating classes in Ruby, I was hard-pressed to find a definition of a <cw>class</cw> or an <cw>instance</cw> that didn't rely heavily on an example. I found "a class is the blueprint from which individual objects are created" on <a href="http://www.tutorialspoint.com/ruby/ruby_classes.htm">Tutorials Point</a>, and "classes are the basic template from which object instances are created. A class is made up of a collection of variables representing internal state and methods providing behaviours that operate on that state." on <a href="http://en.wikibooks.org/wiki/Ruby_Programming/Syntax/Classes">WikiBooks</a>. Re-reading them now, as someone who has played with classes for a bit, that lingo is kinda-sorta starting to make sense to me -- but the reality is, for non-technical people, those explanations are in a foreign and mysterious language! :-) I, too, will now join the ranks of those who rely on examples to clarify this <cw>class</cw> business. Ready, fellow laymen?</p>
+				<p>Look around you, and mentally list three things you see that you use fairly often. My list? A sofa, a coffee table, and a dog toy. I bet you recognize these words. You may even have these items yourself, and you  most likely know what you can do with them. For example, we know that a coffee table typically has a flat surface for holding things like coffee and magazines, that it is typically found in a living room type of area, and that we shouldn't sit on it or feed it to the dog. Having a name for this item saves us from having to describe it over and over and over again whenever we want to reference it. Classes in Ruby exist for the same reason. When we mention a certain <cw>class</cw> -- an <cw>array</cw>, a <cw>hash</cw>, a <cw>string</cw> -- those of us who speak Ruby automatically know what is being spoken about, and what kinds of things can be done with it -- i.e. what <em>methods</em> it has.</p>
+				<p>When we start getting creative in Ruby and building our own furniture or household items, we define them as classes, too -- and we initialize them so that they have the standard features we'd come to expect from that item. For example, suppose that, in Ruby, we're building an app to do our taxes. Taxes, bless them, have a zillion forms. Instead of writing code to create a form every single time we want to use one, we can create a <cw>class</cw> called Form that includes the common features we'll be using: a free text area, a check box, a spot for your signature. We'll also define things that we can do with that form, like print it, email it, or throw it away.</p>
 				<p>To keep things super straightforward for now, let's walk through a quick example. Suppose that we are going to be making checklists and checklists and more checklists in Ruby. It'd be wise to create a CheckList class, so that we can use a basic checklist whenever we have the need. We'd do that as follows:</p>
 				<code_block><p>
 				class Checklist(number_of_items, title)<br>
@@ -51,12 +51,12 @@
 				end</p>
 				</code_block>
 				<p>That is now a basic blueprint for building a Checklist. When we create one, we'll specify the number of items we want on it, and its title, and voila - we have the outline of basic checklist.</p>
-				<p>What's with the <code_words>@this = this</code_words> business? That exists because every checklist that we create is going to need its own title. We won't, for example, want to call every one of them Checklist o' Cool. Because each one will have a title, and that title will be different, we say that this is an <code_words>instance</code_words> of a Checklist, with an <code_words>instance variable</code_words> of a title, and of a number of items. Defining them in our class with the <code_words>@</code_words> symbols lets Ruby know that, every time we have a new checklist, we're going to have a new title and number of items.</p>
+				<p>What's with the <cw>@this = this</cw> business? That exists because every checklist that we create is going to need its own title. We won't, for example, want to call every one of them Checklist o' Cool. Because each one will have a unique title, we say that this is an <cw>instance</cw> of a Checklist, with <cw>instance variables</cw> of a 'title' and of a 'number of items'. Defining them in our class with the <cw>@</cw> symbols lets Ruby know that, every time we have a new checklist, we'll have a string for the title, and a new integer for the number of items -- and that, when we're working with that checklist, we can refer to those variables using their unique names.</p>
 				<p>Within every instance of a Checklist we create, we might want to do similar things -- like check off an item from the list. Within our class definition, we can create methods to do that, such as:</p>
 				<code_block><p>
-				def check_off_item(@item_number)<br>
-				&nbsp&nbspif @item_number == "complete"<br>
-				&nbsp&nbsp&nbsp&nbspdelete item_number<br>
+				def check_off_item(@item_id)<br>
+				&nbsp&nbspif @item_id == "complete"<br>
+				&nbsp&nbsp&nbsp&nbspdelete item_id<br>
 				&nbsp&nbspelse<br>
 				&nbsp&nbsp&nbsp&nbspreturn "You haven't done this!"<br>
 				&nbsp&nbspend<br>
@@ -64,7 +64,7 @@
 
 				</code_block>
 				<p>Now, everytime we want to remove an item, we can call this method:</p>
-				<p><code_words>our_list.check_off_item(4)</code_words></p>
+				<p><cw>our_list.check_off_item(4)</cw></p>
 				<p>...will remove item 4 from the list. No need to write the code every time!</p>
 				<p>While this is a very simplistic take on classes, which are actually quite powerful and allow us to do some awesome things in Ruby, the fundamental point is there: a class gives us a blueprint standard, and its instance variables and methods let us do specific things that make sense for the object.</p>
 			</article>
@@ -77,23 +77,22 @@
 				<p>So, what do we do? We approach the problem in a similar way to how we've been approaching our garbage problem. We need to reduce, figure out how to manage our data. There, the similarities between garbage and data (mostly) end.</p>
 				<p>One of the most simple solutions to our data problem could be just to delete it. Yes?</p>
 				<p>Technical complications aside, we're now living in a world where most people don't <strong>want</strong> to get rid of their data. They want those pictures, those videos, the songs -- and that's just personal stuff. Whole industries are changing the ways that they produce and use data. The medical industry, for example, is digitizing x-rays and patient records. Aviation? Manufacturing? They're creating incredibly complex (and data-heavy) experiments and simulators. The result is data, data, and more data -- not less. Let's throw common ol' business into the mix. Sometimes, they'd be (more than?) happy to delete their data (Enron and Arthur Andersen, anyone?), but that isn't morally or legally in their best interests. Still, do the emails about company luncheons and videos of the CEO dancing on a picnic table need to be saved -- especially if they've been sent to every member of the company? Hello, unnecessary and expensive storage!</p>
-				<p>Solutions? They're in the works. A group has come together called the <a href="https://www.snia.org/">Storage Networking Industry Association (SNIA)</a>. It's a not-for-profit association dedicated to connecting "the IT industry with end-to-end storage and networking solutions." The SNIA has defined the principles of information lifecycle management (ILM), which focusses on getting rid of the data that companies dont', and won't, need as quickly as possible, while maintaining the rest in a way that is cost-effective and accessible.</p>
+				<p>Solutions? They're in the works. A group has come together called the <a href="https://www.snia.org/">Storage Networking Industry Association (SNIA)</a>. It's a not-for-profit association dedicated to connecting "the IT industry with end-to-end storage and networking solutions." The SNIA has defined the principles of information lifecycle management (ILM), which focusses on getting rid of the data that companies don't (and won't) need as quickly as possible, while maintaining the rest in a way that is cost-effective and accessible.</p>
 				<p>A lot of the rest is going to be about user behaviour... and that is going to be a lot like teaching people to reduce, reuse, and recycle. Takes time. A lot of time.</p>
 				<br>
-				<p>For more information, see <a href="http://web.archive.org/web/20090206010415/http://www-03.ibm.com/systems/resources/systems_storage_solutions_pdf_toxic_tb.pdf">this paper</a>, by IBM. Advertising, yes -- but very informative.</p>
+				<p><font size="2">For more information, see my source, <a href="http://web.archive.org/web/20090206010415/http://www-03.ibm.com/systems/resources/systems_storage_solutions_pdf_toxic_tb.pdf">this paper</a>, by IBM. Advertising, yes -- but very informative.</font></p>
 			</article>
 
 			<article id="cycle" class="content" "chunk">
 				<h3>Taking the Cycle-Path</h3>
 				<p>Let's talk cycling.</p>
-				<p>We all know it hurts your butt. What you might not know is that geeks do it, whenever they want, with minimal butt-pain involved whatsoever. Yeah, that's right. And like a woman about to get thrown out of the magician's union, I'm going to show you what's behind the curtain.</p>
-				<p>It's a method in Ruby.</p>
-				<p>That's the end of the fun part. (To each her own, right?! ;-) ) Read on if you'd like to know how it works.</p>
-				<p>You call cycle on an array the standard way: array.cycle , and need an object and a block in curly braces. If you leave that last part out, and just call .cycle on the array, it will return the Enumerable.* The method can also take an argument. If left empty, it defaults to nil. Otherwise, it should be a positive integer. <strong>That integer will tell the method how many times to repeat -- or <em>cycle</em> -- the array through the block.</strong></p>
+				<p>We all know what this is, right? It's when you do something again, and again, and again. Around home, your washing machine has several cycles -- a process for delicates, for example, or a process for when your kids have tarred-and-feathered themselves using mud, leaves, grass-clippings, and the neighbour's tulips. Geeks love cycles in programming. From what I've learned this is because geeks are <strike>lazy</strike> efficient, and would rather cycle through one batch of code than type it out again, and again, and again. </p>
+				<p>Enter the <cw>#cycle</cw> method in Ruby.</p>
+				<p>You call cycle on an array the standard way: <cw>array.cycle</cw>, and need an <cw>object</cw> and a <cw>block</cw> in curly braces. If you leave that last part out, and just call .cycle on the array, it will return the Enumerable.* The method can also take an argument. If left empty, it defaults to nil. Otherwise, it should be a positive integer. <strong>That integer will tell the method how many times to repeat -- or <em>cycle</em> -- the array through the block.</strong></p>
 				<p>The object is any new variable, which represents each element of the array. The block tells us what to do with that element... puts it? print it? collect it? By pulling this altogether, we will take the array, repeat/cycle it the specified number of times, and then puts/print/etc it, as specified by the block. For example:</p>
-				<p>kids = ["Ali", "Eli", "Liz"]</p>
+				<code_block><p>kids = ["Ali", "Eli", "Liz"]</p>
 				<p>kids.cycle(3) {|x| puts x }</p>
-				<p> => ["Ali", "Eli", "Liz","Ali", "Eli", "Liz","Ali", "Eli", "Liz"]</p>
+				<p> => ["Ali", "Eli", "Liz","Ali", "Eli", "Liz","Ali", "Eli", "Liz"]</p></code_block>
 				<p>As my mother-in-law likes to say: Winner, winner, chicken dinner. :-) </p>
 			</article>
 
@@ -104,24 +103,24 @@
 				<p>Here's the deal: An array is just a big ol' numbered list, where the numbers are invisible. That's it, crew. The first number is 0, which is kinda screwy unless you grew up in one of those areas where the ground floor of a building is known as something other than the first floor, but I digress. Arrays = numbered lists. Ta-da!</p>
 				<p>A hash? Stick with me here. A hash is also a list. It can be a numbered list, if you like. Or, it can be a lettered list. Yep. Now, let's get a little cray-cray: It can a list listed by ANYTHING YOU WANT, as long as each of those things is unique. Examples? These are all valid hashes:</p>
 				<p>Example 1:</p>
-				<p>1. potato</p>
+				<code_block><p>1. potato</p>
 				<p>2. car</p>
-				<p>3. Edward</p>
+				<p>3. Edward</p></code_block>
 				<br>
 				<p>Example 2:</p>
-				<p>A. potato</p>
+				<code_block><p>A. potato</p>
 				<p>B. car</p>
-				<p>C. Edward</p>
+				<p>C. Edward</p></code_block>
 				<br>
 				<p>Example 3:</p>
-				<p>monkey. potato</p>
+				<code_block><p>monkey. potato</p>
 				<p>blue. car</p>
-				<p>spoon. Edward</p>
+				<p>spoon. Edward</p></code_block>
 				<br>
 				<p>But this one? This isn't valid. Two of the indexes are the same. FAIL.</p>
-				<p>monkey. potato</p>
+				<code_block><p>monkey. potato</p>
 				<p>blue. car</p>
-				<p>blue. Edward</p>
+				<p>blue. Edward</p></code_block>
 				<br>
 				<p>So, that's it. Arrays are pretty much just the most basic form of hashes, always numbered, with invisible numbers. Cool?</p>
 				<p>If that's the case, why would we ever use an array? We'd use them whenever we want just a simple, simple list, that is invisibly numbered. For anything else, we'll go hash. They have a lot more flexibility, and can also act as mini-mini-databases. Dig it.</p>
