@@ -3,6 +3,7 @@ get '/' do
 	redirect '/sessions/new'
 end
 
+# ---------SESSIONS--------------------
 get '/sessions/new' do
   erb :signin
 end
@@ -21,23 +22,20 @@ post '/sessions' do
   end
 end
 
-# delete '/sessions/:id' do
-#   # sign-out -- invoked via AJAX
-#   return 401 unless params[:id].to_i == session[:user_id].to_i
-#   session.clear
-#   200
-# end
+# -------------HOMEPAGE--------------------------
 get '/users/:user_id' do
-	logger.info(session[:user_id].to_s.class)
-	logger.info(params[:user_id].class)
-	logger.info(session[:user_id] == params[:user_id])
 	if session[:user_id].to_s == params[:user_id]
 		@user = User.find(params[:user_id])
-	logger.info("I'm the user: ")
-	logger.info(@user)
 		erb :home
 	else
 		@error = "You do not have permission to view this page."
 		redirect '/sessions/new'
 	end
+end
+
+post '/task/:task_id/complete' do
+	# content_type "application/json"
+	Task.find(params[:task_id]).complete = true
+
+
 end

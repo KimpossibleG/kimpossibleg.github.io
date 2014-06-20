@@ -1,4 +1,32 @@
+.container {
+	border: double gray	1px;
+	width: 80%;
+	margin: 10px auto;
+	padding: 20px;
+
+}
+
 #error_message {
 	color: red;
 	font-style: bold;
+}
+
+#task li {
+	display: inline-block;
+}
+
+.content {
+	width: 35%;
+}
+
+.category {
+	width: 40%;
+}
+
+.category {
+	width: 10%;
+}
+
+#complete {
+	height: 12px;
 }
