@@ -33,9 +33,16 @@ get '/users/:user_id' do
 	end
 end
 
-post '/task/:task_id/complete' do
+post '/tasks/:task_id/complete' do
 	# content_type "application/json"
-	Task.find(params[:task_id]).complete = true
+	task = Task.find(params[:task_id])
 
+	if task.complete == false
+		logger.info(task.id)
+		Task.update(task.id, complete: true)
+
+	elsif task.complete == true
+		Task.update(task.id, complete: false)
+	end
 
 end
