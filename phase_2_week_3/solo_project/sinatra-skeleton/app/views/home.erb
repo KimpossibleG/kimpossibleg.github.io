@@ -1,0 +1,14 @@
+<!-- have @user -->
+<h3>Hi, <%= @user.name %></h3>
+
+<h2>Task List</h2>
+
+<!-- Create separate ul for each category -->
+
+<ul>
+	<% @user.tasks.each do |task| %>
+	<li class="content"><%= task.content %></li>
+	<li class="category"><%= task.category %></li>
+	<li class="complete"><%= task.complete %></li>
+	<% end %>
+</ul>
