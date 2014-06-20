@@ -7,9 +7,9 @@
 
 <ul id="task">
 	<% @user.tasks.each do |task| %>
+	<li class="complete"><img class="complete_image" id='<%= "#{task.id}" %>' src='../red_x.png'/></li>
 	<li class="content"><%= task.content %></li>
 	<li class="category"><%= task.category %></li>
-	<li class="complete"><img class="complete_image" id='<%= "#{task.id}" %>' src='../red_x.png'/></li>
 	<br>
 	<% end %>
 </ul>

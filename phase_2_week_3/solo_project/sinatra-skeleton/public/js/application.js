@@ -5,8 +5,10 @@ $(document).ready(function() {
 			type: 'post',
 			url: "/task/" + $(this).attr('id') + "/complete",
 			success: function() { 
-				console.log(my_element)
-				$(my_element).attr("src", "../green_check.png");
+				if ($(my_element).attr("src") === "../red_x.png") {
+					$(my_element).attr("src", "../green_check.png"); }
+				else if ($(my_element).attr("src") === "../green_check.png") {
+					$(my_element).attr("src", "../red_x.png"); }
 			}
 		});
 })});
